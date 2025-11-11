@@ -34,44 +34,42 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-[#F7F4EF]">
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-[#F7F4EF]/95 backdrop-blur-sm border-b border-[#E8E3D6]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16 md:h-20">
-            <div className="heading-font text-xl md:text-2xl font-bold text-[#800020]">
-              AURA
-            </div>
-            
-            {/* Desktop Menu */}
-            <div className="hidden md:flex space-x-8">
-              <button onClick={() => scrollToSection('products')} className="text-[#2C1810] hover:text-[#800020] transition-colors font-medium">
-                Products
-              </button>
-              <button onClick={() => scrollToSection('about')} className="text-[#2C1810] hover:text-[#800020] transition-colors font-medium">
-                About
-              </button>
-              <button onClick={() => scrollToSection('contact')} className="text-[#2C1810] hover:text-[#800020] transition-colors font-medium">
-                Contact
-              </button>
-            </div>
-
-            {/* Mobile Menu Button */}
-            <button 
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="md:hidden p-2 text-[#800020]"
-            >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                {mobileMenuOpen ? (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                ) : (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                )}
-              </svg>
+      <nav className="fixed top-6 left-0 right-0 z-50 flex justify-center px-4">
+        <div className="relative flex w-full max-w-5xl items-center justify-between rounded-full border border-[#800020]/40 bg-[#F7F4EF]/90 px-5 py-3 shadow-lg backdrop-blur">
+          <div className="heading-font text-xl md:text-2xl font-bold text-[#800020] drop-shadow-sm">
+            AURA
+          </div>
+          
+          {/* Desktop Menu */}
+          <div className="hidden md:flex items-center space-x-6">
+            <button onClick={() => scrollToSection('products')} className="text-[#2C1810] hover:text-[#800020] transition-colors font-medium">
+              Products
+            </button>
+            <button onClick={() => scrollToSection('about')} className="text-[#2C1810] hover:text-[#800020] transition-colors font-medium">
+              About
+            </button>
+            <button onClick={() => scrollToSection('contact')} className="text-[#2C1810] hover:text-[#800020] transition-colors font-medium">
+              Contact
             </button>
           </div>
 
+          {/* Mobile Menu Button */}
+          <button 
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="md:hidden p-2 text-[#800020]"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              {mobileMenuOpen ? (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              ) : (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              )}
+            </svg>
+          </button>
+
           {/* Mobile Menu */}
           {mobileMenuOpen && (
-            <div className="md:hidden py-4 border-t border-[#E8E3D6]">
+            <div className="absolute top-full left-0 right-0 mt-4 rounded-2xl border border-[#800020]/30 bg-[#F7F4EF]/95 px-4 py-4 shadow-lg md:hidden">
               <button onClick={() => scrollToSection('products')} className="block w-full text-left py-2 text-[#2C1810] hover:text-[#800020]">
                 Products
               </button>
