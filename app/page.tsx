@@ -380,8 +380,7 @@ export default function Home() {
                   </div>
                   <div>
                     <h3 className="font-bold text-[#800020] mb-2">Email Us</h3>
-                    <p className="text-[#6B5A4F]">info@auramagicalclean.com</p>
-                    <p className="text-[#6B5A4F]">support@auramagicalclean.com</p>
+                    <p className="text-[#6B5A4F]">laurawinslet20@gmail.com</p>
                   </div>
                 </div>
               </div>
@@ -395,7 +394,7 @@ export default function Home() {
                   </div>
                   <div>
                     <h3 className="font-bold text-[#800020] mb-2">Call Us</h3>
-                    <p className="text-[#6B5A4F]">+256 700 000 000</p>
+                    <p className="text-[#6B5A4F]">+256 785 664747</p>
                     <p className="text-[#6B5A4F]">Mon-Fri: 9AM - 6PM</p>
                   </div>
                 </div>
