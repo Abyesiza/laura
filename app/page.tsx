@@ -119,13 +119,34 @@ export default function Home() {
             Explore Our Products
           </button>
 
-          {/* Decorative Wave */}
-          <div className="mt-20">
-            <svg className="w-full h-12 text-[#E8E3D6]" viewBox="0 0 1200 120" preserveAspectRatio="none">
-              <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" fill="currentColor"></path>
-              <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" fill="currentColor"></path>
-              <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="currentColor"></path>
-            </svg>
+          {/* Animated Fragrance Bubbles */}
+          <div className="mt-16 flex justify-center gap-8 flex-wrap">
+            <div className={`flex flex-col items-center ${heroAnimation.isVisible ? 'animate-fade-in-up delay-500' : 'opacity-0'}`}>
+              <div className="w-16 h-16 rounded-full bg-[#800020]/10 flex items-center justify-center mb-2 animate-pulse">
+                <svg className="w-8 h-8 text-[#800020]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                </svg>
+              </div>
+              <span className="text-sm text-[#6B5A4F] font-medium">Fresh Scent</span>
+            </div>
+
+            <div className={`flex flex-col items-center ${heroAnimation.isVisible ? 'animate-fade-in-up delay-600' : 'opacity-0'}`}>
+              <div className="w-16 h-16 rounded-full bg-[#800020]/10 flex items-center justify-center mb-2 animate-pulse" style={{animationDelay: '0.5s'}}>
+                <svg className="w-8 h-8 text-[#800020]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" />
+                </svg>
+              </div>
+              <span className="text-sm text-[#6B5A4F] font-medium">Gentle Care</span>
+            </div>
+
+            <div className={`flex flex-col items-center ${heroAnimation.isVisible ? 'animate-fade-in-up delay-700' : 'opacity-0'}`}>
+              <div className="w-16 h-16 rounded-full bg-[#800020]/10 flex items-center justify-center mb-2 animate-pulse" style={{animationDelay: '1s'}}>
+                <svg className="w-8 h-8 text-[#800020]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <span className="text-sm text-[#6B5A4F] font-medium">Premium Quality</span>
+            </div>
           </div>
         </div>
       </section>
@@ -142,16 +163,20 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8 lg:gap-12 max-w-6xl mx-auto">
             {/* Product 1 */}
-            <div className={`group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 ${productsAnimation.isVisible ? 'animate-slide-in-left delay-200' : 'opacity-0'}`}>
-              <div className="relative h-80 bg-[#F5F5DC] overflow-hidden flex items-center justify-center">
+            <div className={`group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] ${productsAnimation.isVisible ? 'animate-slide-in-left delay-200' : 'opacity-0'}`}>
+              <div className="relative h-[450px] bg-gradient-to-br from-[#F5F5DC] to-[#E8E3D6] overflow-hidden flex items-center justify-center">
                 <Image
                   src="/assets/classic.png"
                   alt="AURA Classic Clean"
                   fill
-                  className="object-contain group-hover:scale-110 transition-transform duration-500 p-8"
+                  className="object-contain group-hover:scale-110 transition-transform duration-500 p-6"
                 />
+                {/* Floating bubbles animation */}
+                <div className="absolute top-10 left-10 w-4 h-4 rounded-full bg-white/40 animate-bounce" style={{animationDelay: '0s', animationDuration: '3s'}}></div>
+                <div className="absolute bottom-20 right-12 w-3 h-3 rounded-full bg-white/30 animate-bounce" style={{animationDelay: '1s', animationDuration: '4s'}}></div>
+                <div className="absolute top-32 right-16 w-2 h-2 rounded-full bg-white/50 animate-bounce" style={{animationDelay: '2s', animationDuration: '3.5s'}}></div>
               </div>
               <div className="p-8">
                 <h3 className="heading-font text-2xl font-bold text-[#800020] mb-3">
@@ -171,14 +196,18 @@ export default function Home() {
             </div>
 
             {/* Product 2 */}
-            <div className={`group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 ${productsAnimation.isVisible ? 'animate-slide-in-right delay-300' : 'opacity-0'}`}>
-              <div className="relative h-80 bg-[#F5F5DC] overflow-hidden flex items-center justify-center">
+            <div className={`group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] ${productsAnimation.isVisible ? 'animate-slide-in-right delay-300' : 'opacity-0'}`}>
+              <div className="relative h-[450px] bg-gradient-to-br from-[#F5F5DC] to-[#E8E3D6] overflow-hidden flex items-center justify-center">
                 <Image
                   src="/assets/premium.png"
                   alt="AURA Luxury Lavender"
                   fill
-                  className="object-contain group-hover:scale-110 transition-transform duration-500 p-8"
+                  className="object-contain group-hover:scale-110 transition-transform duration-500 p-6"
                 />
+                {/* Floating bubbles animation */}
+                <div className="absolute top-16 right-10 w-4 h-4 rounded-full bg-white/40 animate-bounce" style={{animationDelay: '0.5s', animationDuration: '3.5s'}}></div>
+                <div className="absolute bottom-24 left-12 w-3 h-3 rounded-full bg-white/30 animate-bounce" style={{animationDelay: '1.5s', animationDuration: '4s'}}></div>
+                <div className="absolute top-28 left-16 w-2 h-2 rounded-full bg-white/50 animate-bounce" style={{animationDelay: '2.5s', animationDuration: '3s'}}></div>
               </div>
               <div className="p-8">
                 <h3 className="heading-font text-2xl font-bold text-[#800020] mb-3">
